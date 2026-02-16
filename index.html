@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دليل المجالس - الصور</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 10px 25px rgba(0,0,0,.06);
+      --shadow2: 0 4px 12px rgba(0,0,0,.06);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, "Noto Kufi Arabic", "Noto Sans Arabic", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(243,244,246,.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 14px;
+    }
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .title {
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .count {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .search {
+      display:flex;
+      gap: 10px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow2);
+    }
+    .search input {
+      border: 0;
+      outline: none;
+      font-size: 14px;
+      width: 100%;
+      background: transparent;
+      color: var(--ink);
+    }
+    .search .hint {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .filters {
+      display:flex;
+      gap: 8px;
+      overflow: auto;
+      padding-bottom: 6px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 9px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+      box-shadow: var(--shadow2);
+      user-select: none;
+      transition: transform .04s ease;
+    }
+    .chip:active { transform: scale(.98); }
+    .chip[data-active="true"] {
+      border-color: #111827;
+      box-shadow: 0 0 0 2px rgba(17,24,39,.08), var(--shadow2);
+      font-weight: 700;
+    }
+
+    main .wrap {
+      padding-top: 18px;
+      padding-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .cardhead {
+      padding: 12px 14px 10px 14px;
+      border-bottom: 1px solid var(--border);
+      display:flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .meta {
+      display:flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+    .name {
+      font-size: 14px;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+    .sub {
+      font-size: 12px;
+      color: var(--muted);
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      padding: 4px 9px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fafafa;
+    }
+    .actions {
+      display:flex;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .btn {
+      border: 1px solid var(--border);
+      background: #111827;
+      color: #fff;
+      padding: 9px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      box-shadow: var(--shadow2);
+      text-decoration: none;
+      display:inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn.secondary {
+      background: #fff;
+      color: var(--ink);
+    }
+    .imgwrap {
+      background: #fff;
+      padding: 10px;
+    }
+    .img {
+      width: 100%;
+      height: auto;
+      display:block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .empty {
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 20px 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Desktop */
+    @media (min-width: 900px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+      .controls {
+        grid-template-columns: 1.2fr .8fr;
+        align-items: center;
+      }
+      .filters {
+        justify-content: flex-start;
+      }
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* "PDF-like" feel: cards like pages */
+    .pagefeel {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 10px;
+    }
+    .footer {
+      padding: 10px 0 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="title">
+          <h1>دليل المجالس (صور منفصلة)</h1>
+          <div class="count" id="countLabel"></div>
+        </div>
+
+        <div class="controls">
+          <div class="search" role="search">
+            <input id="q" type="search" placeholder="بحث عام: اكتب اسم المجلس أو رقم المجمع أو رقم البيت…" autocomplete="off" />
+            <span class="hint">مثال: 754 أو 271</span>
+          </div>
+
+          <div class="filters" id="filters" aria-label="تصفية حسب رقم المجمع"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="grid" id="grid"></div>
+      <div class="footer">يمكنك البحث أو اختيار رقم مجمع للتنقل بسرعة.</div>
+    </div>
+  </main>
+
+  <script>
+    // بيانات المجالس (مُولّدة تلقائياً من أسماء الملفات: block_house.png)
+    const MAJLES = [{"block": 752, "house": "96", "name": "مجلس مجمع 752 بيت 96", "image": "images/752_96.png"}, {"block": 752, "house": "1010", "name": "مجلس مجمع 752 بيت 1010", "image": "images/752_1010.png"}, {"block": 752, "house": "1068", "name": "مجلس مجمع 752 بيت 1068", "image": "images/752_1068.png"}, {"block": 752, "house": "1076", "name": "مجلس مجمع 752 بيت 1076", "image": "images/752_1076.png"}, {"block": 752, "house": "1124", "name": "مجلس مجمع 752 بيت 1124", "image": "images/752_1124.png"}, {"block": 752, "house": "1171", "name": "مجلس مجمع 752 بيت 1171", "image": "images/752_1171.png"}, {"block": 752, "house": "1370", "name": "مجلس مجمع 752 بيت 1370", "image": "images/752_1370.png"}, {"block": 752, "house": "1449", "name": "مجلس مجمع 752 بيت 1449", "image": "images/752_1449.png"}, {"block": 752, "house": "1511", "name": "مجلس مجمع 752 بيت 1511", "image": "images/752_1511.png"}, {"block": 752, "house": "1585", "name": "مجلس مجمع 752 بيت 1585", "image": "images/752_1585.png"}, {"block": 752, "house": "1692", "name": "مجلس مجمع 752 بيت 1692", "image": "images/752_1692.png"}, {"block": 752, "house": "1698", "name": "مجلس مجمع 752 بيت 1698", "image": "images/752_1698.png"}, {"block": 752, "house": "1876", "name": "مجلس مجمع 752 بيت 1876", "image": "images/752_1876.png"}, {"block": 752, "house": "1934", "name": "مجلس مجمع 752 بيت 1934", "image": "images/752_1934.png"}, {"block": 752, "house": "2204", "name": "مجلس مجمع 752 بيت 2204", "image": "images/752_2204.png"}, {"block": 752, "house": "2253", "name": "مجلس مجمع 752 بيت 2253", "image": "images/752_2253.png"}, {"block": 754, "house": "170", "name": "مجلس مجمع 754 بيت 170", "image": "images/754_170.png"}, {"block": 754, "house": "175", "name": "مجلس مجمع 754 بيت 175", "image": "images/754_175.png"}, {"block": 754, "house": "178", "name": "مجلس مجمع 754 بيت 178", "image": "images/754_178.png"}, {"block": 754, "house": "221", "name": "مجلس مجمع 754 بيت 221", "image": "images/754_221.png"}, {"block": 754, "house": "229", "name": "مجلس مجمع 754 بيت 229", "image": "images/754_229.png"}, {"block": 754, "house": "250", "name": "مجلس مجمع 754 بيت 250", "image": "images/754_250.png"}, {"block": 754, "house": "258", "name": "مجلس مجمع 754 بيت 258", "image": "images/754_258.png"}, {"block": 754, "house": "260", "name": "مجلس مجمع 754 بيت 260", "image": "images/754_260.png"}, {"block": 754, "house": "261", "name": "مجلس مجمع 754 بيت 261", "image": "images/754_261.png"}, {"block": 754, "house": "267", "name": "مجلس مجمع 754 بيت 267", "image": "images/754_267.png"}, {"block": 754, "house": "271", "name": "مجلس مجمع 754 بيت 271", "image": "images/754_271.png"}, {"block": 754, "house": "299", "name": "مجلس مجمع 754 بيت 299", "image": "images/754_299.png"}, {"block": 754, "house": "300", "name": "مجلس مجمع 754 بيت 300", "image": "images/754_300.png"}, {"block": 754, "house": "301", "name": "مجلس مجمع 754 بيت 301", "image": "images/754_301.png"}, {"block": 754, "house": "376", "name": "مجلس مجمع 754 بيت 376", "image": "images/754_376.png"}, {"block": 754, "house": "382", "name": "مجلس مجمع 754 بيت 382", "image": "images/754_382.png"}, {"block": 754, "house": "448", "name": "مجلس مجمع 754 بيت 448", "image": "images/754_448.png"}, {"block": 754, "house": "482", "name": "مجلس مجمع 754 بيت 482", "image": "images/754_482.png"}, {"block": 754, "house": "488", "name": "مجلس مجمع 754 بيت 488", "image": "images/754_488.png"}, {"block": 754, "house": "506", "name": "مجلس مجمع 754 بيت 506", "image": "images/754_506.png"}, {"block": 754, "house": "517", "name": "مجلس مجمع 754 بيت 517", "image": "images/754_517.png"}, {"block": 754, "house": "518", "name": "مجلس مجمع 754 بيت 518", "image": "images/754_518.png"}, {"block": 754, "house": "524", "name": "مجلس مجمع 754 بيت 524", "image": "images/754_524.png"}, {"block": 754, "house": "525", "name": "مجلس مجمع 754 بيت 525", "image": "images/754_525.png"}, {"block": 754, "house": "545", "name": "مجلس مجمع 754 بيت 545", "image": "images/754_545.png"}, {"block": 754, "house": "546", "name": "مجلس مجمع 754 بيت 546", "image": "images/754_546.png"}, {"block": 754, "house": "554", "name": "مجلس مجمع 754 بيت 554", "image": "images/754_554.png"}, {"block": 754, "house": "585", "name": "مجلس مجمع 754 بيت 585", "image": "images/754_585.png"}, {"block": 754, "house": "589", "name": "مجلس مجمع 754 بيت 589", "image": "images/754_589.png"}, {"block": 754, "house": "596", "name": "مجلس مجمع 754 بيت 596", "image": "images/754_596.png"}, {"block": 754, "house": "617", "name": "مجلس مجمع 754 بيت 617", "image": "images/754_617.png"}, {"block": 754, "house": "627", "name": "مجلس مجمع 754 بيت 627", "image": "images/754_627.png"}, {"block": 754, "house": "651", "name": "مجلس مجمع 754 بيت 651", "image": "images/754_651.png"}, {"block": 754, "house": "653", "name": "مجلس مجمع 754 بيت 653", "image": "images/754_653.png"}, {"block": 754, "house": "663", "name": "مجلس مجمع 754 بيت 663", "image": "images/754_663.png"}, {"block": 754, "house": "691", "name": "مجلس مجمع 754 بيت 691", "image": "images/754_691.png"}, {"block": 754, "house": "728", "name": "مجلس مجمع 754 بيت 728", "image": "images/754_728.png"}, {"block": 754, "house": "802", "name": "مجلس مجمع 754 بيت 802", "image": "images/754_802.png"}, {"block": 754, "house": "804", "name": "مجلس مجمع 754 بيت 804", "image": "images/754_804.png"}, {"block": 754, "house": "812", "name": "مجلس مجمع 754 بيت 812", "image": "images/754_812.png"}, {"block": 754, "house": "885", "name": "مجلس مجمع 754 بيت 885", "image": "images/754_885.png"}, {"block": 754, "house": "886", "name": "مجلس مجمع 754 بيت 886", "image": "images/754_886.png"}, {"block": 754, "house": "889", "name": "مجلس مجمع 754 بيت 889", "image": "images/754_889.png"}, {"block": 754, "house": "891", "name": "مجلس مجمع 754 بيت 891", "image": "images/754_891.png"}, {"block": 754, "house": "898", "name": "مجلس مجمع 754 بيت 898", "image": "images/754_898.png"}, {"block": 754, "house": "934", "name": "مجلس مجمع 754 بيت 934", "image": "images/754_934.png"}, {"block": 754, "house": "962", "name": "مجلس مجمع 754 بيت 962", "image": "images/754_962.png"}, {"block": 754, "house": "973", "name": "مجلس مجمع 754 بيت 973", "image": "images/754_973.png"}, {"block": 754, "house": "994", "name": "مجلس مجمع 754 بيت 994", "image": "images/754_994.png"}, {"block": 754, "house": "999", "name": "مجلس مجمع 754 بيت 999", "image": "images/754_999.png"}, {"block": 754, "house": "1012", "name": "مجلس مجمع 754 بيت 1012", "image": "images/754_1012.png"}, {"block": 754, "house": "1018", "name": "مجلس مجمع 754 بيت 1018", "image": "images/754_1018.png"}, {"block": 754, "house": "1052", "name": "مجلس مجمع 754 بيت 1052", "image": "images/754_1052.png"}, {"block": 754, "house": "1068", "name": "مجلس مجمع 754 بيت 1068", "image": "images/754_1068.png"}, {"block": 754, "house": "1070", "name": "مجلس مجمع 754 بيت 1070", "image": "images/754_1070.png"}, {"block": 754, "house": "1071", "name": "مجلس مجمع 754 بيت 1071", "image": "images/754_1071.png"}, {"block": 754, "house": "1176", "name": "مجلس مجمع 754 بيت 1176", "image": "images/754_1176.png"}, {"block": 754, "house": "1177", "name": "مجلس مجمع 754 بيت 1177", "image": "images/754_1177.png"}, {"block": 754, "house": "1184", "name": "مجلس مجمع 754 بيت 1184", "image": "images/754_1184.png"}, {"block": 754, "house": "1193", "name": "مجلس مجمع 754 بيت 1193", "image": "images/754_1193.png"}, {"block": 754, "house": "1195", "name": "مجلس مجمع 754 بيت 1195", "image": "images/754_1195.png"}, {"block": 754, "house": "1199", "name": "مجلس مجمع 754 بيت 1199", "image": "images/754_1199.png"}, {"block": 754, "house": "1207", "name": "مجلس مجمع 754 بيت 1207", "image": "images/754_1207.png"}, {"block": 754, "house": "1211", "name": "مجلس مجمع 754 بيت 1211", "image": "images/754_1211.png"}, {"block": 754, "house": "1213", "name": "مجلس مجمع 754 بيت 1213", "image": "images/754_1213.png"}, {"block": 754, "house": "1219", "name": "مجلس مجمع 754 بيت 1219", "image": "images/754_1219.png"}, {"block": 754, "house": "1221", "name": "مجلس مجمع 754 بيت 1221", "image": "images/754_1221.png"}, {"block": 754, "house": "1223", "name": "مجلس مجمع 754 بيت 1223", "image": "images/754_1223.png"}, {"block": 754, "house": "1743", "name": "مجلس مجمع 754 بيت 1743", "image": "images/754_1743.png"}, {"block": 756, "house": "6", "name": "مجلس مجمع 756 بيت 6", "image": "images/756_6.png"}, {"block": 756, "house": "10", "name": "مجلس مجمع 756 بيت 10", "image": "images/756_10.png"}, {"block": 756, "house": "584", "name": "مجلس مجمع 756 بيت 584", "image": "images/756_584.png"}, {"block": 756, "house": "662", "name": "مجلس مجمع 756 بيت 662", "image": "images/756_662.png"}, {"block": 756, "house": "1092", "name": "مجلس مجمع 756 بيت 1092", "image": "images/756_1092.png"}, {"block": 756, "house": "1209", "name": "مجلس مجمع 756 بيت 1209", "image": "images/756_1209.png"}, {"block": 756, "house": "1298", "name": "مجلس مجمع 756 بيت 1298", "image": "images/756_1298.png"}, {"block": 756, "house": "1311", "name": "مجلس مجمع 756 بيت 1311", "image": "images/756_1311.png"}, {"block": 756, "house": "1339", "name": "مجلس مجمع 756 بيت 1339", "image": "images/756_1339.png"}, {"block": 756, "house": "1424", "name": "مجلس مجمع 756 بيت 1424", "image": "images/756_1424.png"}, {"block": 756, "house": "1430", "name": "مجلس مجمع 756 بيت 1430", "image": "images/756_1430.png"}, {"block": 756, "house": "1441", "name": "مجلس مجمع 756 بيت 1441", "image": "images/756_1441.png"}, {"block": 756, "house": "1442", "name": "مجلس مجمع 756 بيت 1442", "image": "images/756_1442.png"}, {"block": 756, "house": "1443", "name": "مجلس مجمع 756 بيت 1443", "image": "images/756_1443.png"}, {"block": 756, "house": "1452", "name": "مجلس مجمع 756 بيت 1452", "image": "images/756_1452.png"}, {"block": 756, "house": "1456", "name": "مجلس مجمع 756 بيت 1456", "image": "images/756_1456.png"}, {"block": 756, "house": "1493", "name": "مجلس مجمع 756 بيت 1493", "image": "images/756_1493.png"}, {"block": 756, "house": "1500", "name": "مجلس مجمع 756 بيت 1500", "image": "images/756_1500.png"}, {"block": 756, "house": "1514", "name": "مجلس مجمع 756 بيت 1514", "image": "images/756_1514.png"}, {"block": 756, "house": "1522", "name": "مجلس مجمع 756 بيت 1522", "image": "images/756_1522.png"}, {"block": 756, "house": "1526", "name": "مجلس مجمع 756 بيت 1526", "image": "images/756_1526.png"}, {"block": 756, "house": "1605", "name": "مجلس مجمع 756 بيت 1605", "image": "images/756_1605.png"}, {"block": 756, "house": "1609", "name": "مجلس مجمع 756 بيت 1609", "image": "images/756_1609.png"}, {"block": 756, "house": "1617", "name": "مجلس مجمع 756 بيت 1617", "image": "images/756_1617.png"}, {"block": 756, "house": "1620", "name": "مجلس مجمع 756 بيت 1620", "image": "images/756_1620.png"}, {"block": 756, "house": "2724", "name": "مجلس مجمع 756 بيت 2724", "image": "images/756_2724.png"}, {"block": 758, "house": "13", "name": "مجلس مجمع 758 بيت 13", "image": "images/758_13.png"}, {"block": 758, "house": "694", "name": "مجلس مجمع 758 بيت 694", "image": "images/758_694.png"}, {"block": 758, "house": "1080", "name": "مجلس مجمع 758 بيت 1080", "image": "images/758_1080.png"}];
+
+    const blocks = Array.from(new Set(MAJLES.map(x => x.block))).sort((a,b) => a-b);
+
+    const state = {
+      block: "all",
+      q: ""
+    };
+
+    const elFilters = document.getElementById("filters");
+    const elGrid = document.getElementById("grid");
+    const elQ = document.getElementById("q");
+    const elCount = document.getElementById("countLabel");
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    function setActiveChip() {
+      [...elFilters.querySelectorAll(".chip")].forEach(ch => {
+        ch.dataset.active = (ch.dataset.value === String(state.block)) ? "true" : "false";
+      });
+    }
+
+    function renderFilters() {
+      const chips = [];
+      chips.push(`<div class="chip" data-value="all" data-active="true">الكل</div>`);
+      blocks.forEach(b => {
+        chips.push(`<div class="chip" data-value="${b}">مجمع ${b}</div>`);
+      });
+      elFilters.innerHTML = chips.join("");
+      elFilters.addEventListener("click", (e) => {
+        const chip = e.target.closest(".chip");
+        if (!chip) return;
+        state.block = chip.dataset.value;
+        setActiveChip();
+        render();
+        // على الموبايل: أرجع للأعلى بعد اختيار فلتر
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    function matches(item) {
+      if (state.block !== "all" && String(item.block) !== String(state.block)) return false;
+      const q = state.q.trim().toLowerCase();
+      if (!q) return true;
+
+      const hay = [
+        item.name,
+        String(item.block),
+        String(item.house)
+      ].join(" ").toLowerCase();
+
+      return hay.includes(q);
+    }
+
+    function render() {
+      const filtered = MAJLES.filter(matches);
+
+      elCount.textContent = `المعروض: ${filtered.length} / ${MAJLES.length}`;
+
+      if (filtered.length === 0) {
+        elGrid.innerHTML = `<div class="empty">لا توجد نتائج مطابقة. جرّب كلمة أخرى أو ألغِ الفلتر.</div>`;
+        return;
+      }
+
+      elGrid.innerHTML = filtered.map(item => {
+        const name = escapeHtml(item.name);
+        return `
+          <section class="card" aria-label="${name}">
+            <div class="cardhead">
+              <div class="meta">
+                <p class="name">${name}</p>
+                <div class="sub">
+                  <span class="badge">المجمع: ${item.block}</span>
+                  <span class="badge">البيت: ${escapeHtml(item.house)}</span>
+                </div>
+              </div>
+              <div class="actions">
+                <a class="btn secondary" href="${item.image}" target="_blank" rel="noopener">فتح الصورة</a>
+              </div>
+            </div>
+            <div class="imgwrap">
+              <img class="img" loading="lazy" src="${item.image}" alt="${name}" />
+            </div>
+          </section>
+        `;
+      }).join("");
+    }
+
+    elQ.addEventListener("input", () => {
+      state.q = elQ.value;
+      render();
+    });
+
+    // اختصار لوحة مفاتيح: /
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement !== elQ) {
+        e.preventDefault();
+        elQ.focus();
+      }
+      if (e.key === "Escape") {
+        elQ.value = "";
+        state.q = "";
+        render();
+      }
+    });
+
+    renderFilters();
+    render();
+  </script>
+</body>
+</html>

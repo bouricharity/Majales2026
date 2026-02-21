@@ -246,7 +246,7 @@
     <div class="wrap">
       <div class="topbar">
         <div class="title">
-          <h1>دليل المجالس (صور منفصلة)</h1>
+          <h1>دليل المجالس</h1>
           <div class="count" id="countLabel"></div>
         </div>
 
@@ -271,9 +271,133 @@
 
   <script>
     // بيانات المجالس (مُولّدة تلقائياً من أسماء الملفات: block_house.png)
-    const MAJLES = [{"block": 752, "house": "96", "name": "مجلس مجمع 752 بيت 96", "image": "images/752_96.png"}, {"block": 752, "house": "1010", "name": "مجلس مجمع 752 بيت 1010", "image": "images/752_1010.png"}, {"block": 752, "house": "1068", "name": "مجلس مجمع 752 بيت 1068", "image": "images/752_1068.png"}, {"block": 752, "house": "1076", "name": "مجلس مجمع 752 بيت 1076", "image": "images/752_1076.png"}, {"block": 752, "house": "1124", "name": "مجلس مجمع 752 بيت 1124", "image": "images/752_1124.png"}, {"block": 752, "house": "1171", "name": "مجلس مجمع 752 بيت 1171", "image": "images/752_1171.png"}, {"block": 752, "house": "1370", "name": "مجلس مجمع 752 بيت 1370", "image": "images/752_1370.png"}, {"block": 752, "house": "1449", "name": "مجلس مجمع 752 بيت 1449", "image": "images/752_1449.png"}, {"block": 752, "house": "1511", "name": "مجلس مجمع 752 بيت 1511", "image": "images/752_1511.png"}, {"block": 752, "house": "1585", "name": "مجلس مجمع 752 بيت 1585", "image": "images/752_1585.png"}, {"block": 752, "house": "1692", "name": "مجلس مجمع 752 بيت 1692", "image": "images/752_1692.png"}, {"block": 752, "house": "1698", "name": "مجلس مجمع 752 بيت 1698", "image": "images/752_1698.png"}, {"block": 752, "house": "1876", "name": "مجلس مجمع 752 بيت 1876", "image": "images/752_1876.png"}, {"block": 752, "house": "1934", "name": "مجلس مجمع 752 بيت 1934", "image": "images/752_1934.png"}, {"block": 752, "house": "2204", "name": "مجلس مجمع 752 بيت 2204", "image": "images/752_2204.png"}, {"block": 752, "house": "2253", "name": "مجلس مجمع 752 بيت 2253", "image": "images/752_2253.png"}, {"block": 754, "house": "170", "name": "مجلس مجمع 754 بيت 170", "image": "images/754_170.png"}, {"block": 754, "house": "175", "name": "مجلس مجمع 754 بيت 175", "image": "images/754_175.png"}, {"block": 754, "house": "178", "name": "مجلس مجمع 754 بيت 178", "image": "images/754_178.png"}, {"block": 754, "house": "221", "name": "مجلس مجمع 754 بيت 221", "image": "images/754_221.png"}, {"block": 754, "house": "229", "name": "مجلس مجمع 754 بيت 229", "image": "images/754_229.png"}, {"block": 754, "house": "250", "name": "مجلس مجمع 754 بيت 250", "image": "images/754_250.png"}, {"block": 754, "house": "258", "name": "مجلس مجمع 754 بيت 258", "image": "images/754_258.png"}, {"block": 754, "house": "260", "name": "مجلس مجمع 754 بيت 260", "image": "images/754_260.png"}, {"block": 754, "house": "261", "name": "مجلس مجمع 754 بيت 261", "image": "images/754_261.png"}, {"block": 754, "house": "267", "name": "مجلس مجمع 754 بيت 267", "image": "images/754_267.png"}, {"block": 754, "house": "271", "name": "مجلس مجمع 754 بيت 271", "image": "images/754_271.png"}, {"block": 754, "house": "299", "name": "مجلس مجمع 754 بيت 299", "image": "images/754_299.png"}, {"block": 754, "house": "300", "name": "مجلس مجمع 754 بيت 300", "image": "images/754_300.png"}, {"block": 754, "house": "301", "name": "مجلس مجمع 754 بيت 301", "image": "images/754_301.png"}, {"block": 754, "house": "376", "name": "مجلس مجمع 754 بيت 376", "image": "images/754_376.png"}, {"block": 754, "house": "382", "name": "مجلس مجمع 754 بيت 382", "image": "images/754_382.png"}, {"block": 754, "house": "448", "name": "مجلس مجمع 754 بيت 448", "image": "images/754_448.png"}, {"block": 754, "house": "482", "name": "مجلس مجمع 754 بيت 482", "image": "images/754_482.png"}, {"block": 754, "house": "488", "name": "مجلس مجمع 754 بيت 488", "image": "images/754_488.png"}, {"block": 754, "house": "506", "name": "مجلس مجمع 754 بيت 506", "image": "images/754_506.png"}, {"block": 754, "house": "517", "name": "مجلس مجمع 754 بيت 517", "image": "images/754_517.png"}, {"block": 754, "house": "518", "name": "مجلس مجمع 754 بيت 518", "image": "images/754_518.png"}, {"block": 754, "house": "524", "name": "مجلس مجمع 754 بيت 524", "image": "images/754_524.png"}, {"block": 754, "house": "525", "name": "مجلس مجمع 754 بيت 525", "image": "images/754_525.png"}, {"block": 754, "house": "545", "name": "مجلس مجمع 754 بيت 545", "image": "images/754_545.png"}, {"block": 754, "house": "546", "name": "مجلس مجمع 754 بيت 546", "image": "images/754_546.png"}, {"block": 754, "house": "554", "name": "مجلس مجمع 754 بيت 554", "image": "images/754_554.png"}, {"block": 754, "house": "585", "name": "مجلس مجمع 754 بيت 585", "image": "images/754_585.png"}, {"block": 754, "house": "589", "name": "مجلس مجمع 754 بيت 589", "image": "images/754_589.png"}, {"block": 754, "house": "596", "name": "مجلس مجمع 754 بيت 596", "image": "images/754_596.png"}, {"block": 754, "house": "617", "name": "مجلس مجمع 754 بيت 617", "image": "images/754_617.png"}, {"block": 754, "house": "627", "name": "مجلس مجمع 754 بيت 627", "image": "images/754_627.png"}, {"block": 754, "house": "651", "name": "مجلس مجمع 754 بيت 651", "image": "images/754_651.png"}, {"block": 754, "house": "653", "name": "مجلس مجمع 754 بيت 653", "image": "images/754_653.png"}, {"block": 754, "house": "663", "name": "مجلس مجمع 754 بيت 663", "image": "images/754_663.png"}, {"block": 754, "house": "691", "name": "مجلس مجمع 754 بيت 691", "image": "images/754_691.png"}, {"block": 754, "house": "728", "name": "مجلس مجمع 754 بيت 728", "image": "images/754_728.png"}, {"block": 754, "house": "802", "name": "مجلس مجمع 754 بيت 802", "image": "images/754_802.png"}, {"block": 754, "house": "804", "name": "مجلس مجمع 754 بيت 804", "image": "images/754_804.png"}, {"block": 754, "house": "812", "name": "مجلس مجمع 754 بيت 812", "image": "images/754_812.png"}, {"block": 754, "house": "885", "name": "مجلس مجمع 754 بيت 885", "image": "images/754_885.png"}, {"block": 754, "house": "886", "name": "مجلس مجمع 754 بيت 886", "image": "images/754_886.png"}, {"block": 754, "house": "889", "name": "مجلس مجمع 754 بيت 889", "image": "images/754_889.png"}, {"block": 754, "house": "891", "name": "مجلس مجمع 754 بيت 891", "image": "images/754_891.png"}, {"block": 754, "house": "898", "name": "مجلس مجمع 754 بيت 898", "image": "images/754_898.png"}, {"block": 754, "house": "934", "name": "مجلس مجمع 754 بيت 934", "image": "images/754_934.png"}, {"block": 754, "house": "962", "name": "مجلس مجمع 754 بيت 962", "image": "images/754_962.png"}, {"block": 754, "house": "973", "name": "مجلس مجمع 754 بيت 973", "image": "images/754_973.png"}, {"block": 754, "house": "994", "name": "مجلس مجمع 754 بيت 994", "image": "images/754_994.png"}, {"block": 754, "house": "999", "name": "مجلس مجمع 754 بيت 999", "image": "images/754_999.png"}, {"block": 754, "house": "1012", "name": "مجلس مجمع 754 بيت 1012", "image": "images/754_1012.png"}, {"block": 754, "house": "1018", "name": "مجلس مجمع 754 بيت 1018", "image": "images/754_1018.png"}, {"block": 754, "house": "1052", "name": "مجلس مجمع 754 بيت 1052", "image": "images/754_1052.png"}, {"block": 754, "house": "1068", "name": "مجلس مجمع 754 بيت 1068", "image": "images/754_1068.png"}, {"block": 754, "house": "1070", "name": "مجلس مجمع 754 بيت 1070", "image": "images/754_1070.png"}, {"block": 754, "house": "1071", "name": "مجلس مجمع 754 بيت 1071", "image": "images/754_1071.png"}, {"block": 754, "house": "1176", "name": "مجلس مجمع 754 بيت 1176", "image": "images/754_1176.png"}, {"block": 754, "house": "1177", "name": "مجلس مجمع 754 بيت 1177", "image": "images/754_1177.png"}, {"block": 754, "house": "1184", "name": "مجلس مجمع 754 بيت 1184", "image": "images/754_1184.png"}, {"block": 754, "house": "1193", "name": "مجلس مجمع 754 بيت 1193", "image": "images/754_1193.png"}, {"block": 754, "house": "1195", "name": "مجلس مجمع 754 بيت 1195", "image": "images/754_1195.png"}, {"block": 754, "house": "1199", "name": "مجلس مجمع 754 بيت 1199", "image": "images/754_1199.png"}, {"block": 754, "house": "1207", "name": "مجلس مجمع 754 بيت 1207", "image": "images/754_1207.png"}, {"block": 754, "house": "1211", "name": "مجلس مجمع 754 بيت 1211", "image": "images/754_1211.png"}, {"block": 754, "house": "1213", "name": "مجلس مجمع 754 بيت 1213", "image": "images/754_1213.png"}, {"block": 754, "house": "1219", "name": "مجلس مجمع 754 بيت 1219", "image": "images/754_1219.png"}, {"block": 754, "house": "1221", "name": "مجلس مجمع 754 بيت 1221", "image": "images/754_1221.png"}, {"block": 754, "house": "1223", "name": "مجلس مجمع 754 بيت 1223", "image": "images/754_1223.png"}, {"block": 754, "house": "1743", "name": "مجلس مجمع 754 بيت 1743", "image": "images/754_1743.png"}, {"block": 756, "house": "6", "name": "مجلس مجمع 756 بيت 6", "image": "images/756_6.png"}, {"block": 756, "house": "10", "name": "مجلس مجمع 756 بيت 10", "image": "images/756_10.png"}, {"block": 756, "house": "584", "name": "مجلس مجمع 756 بيت 584", "image": "images/756_584.png"}, {"block": 756, "house": "662", "name": "مجلس مجمع 756 بيت 662", "image": "images/756_662.png"}, {"block": 756, "house": "1092", "name": "مجلس مجمع 756 بيت 1092", "image": "images/756_1092.png"}, {"block": 756, "house": "1209", "name": "مجلس مجمع 756 بيت 1209", "image": "images/756_1209.png"}, {"block": 756, "house": "1298", "name": "مجلس مجمع 756 بيت 1298", "image": "images/756_1298.png"}, {"block": 756, "house": "1311", "name": "مجلس مجمع 756 بيت 1311", "image": "images/756_1311.png"}, {"block": 756, "house": "1339", "name": "مجلس مجمع 756 بيت 1339", "image": "images/756_1339.png"}, {"block": 756, "house": "1424", "name": "مجلس مجمع 756 بيت 1424", "image": "images/756_1424.png"}, {"block": 756, "house": "1430", "name": "مجلس مجمع 756 بيت 1430", "image": "images/756_1430.png"}, {"block": 756, "house": "1441", "name": "مجلس مجمع 756 بيت 1441", "image": "images/756_1441.png"}, {"block": 756, "house": "1442", "name": "مجلس مجمع 756 بيت 1442", "image": "images/756_1442.png"}, {"block": 756, "house": "1443", "name": "مجلس مجمع 756 بيت 1443", "image": "images/756_1443.png"}, {"block": 756, "house": "1452", "name": "مجلس مجمع 756 بيت 1452", "image": "images/756_1452.png"}, {"block": 756, "house": "1456", "name": "مجلس مجمع 756 بيت 1456", "image": "images/756_1456.png"}, {"block": 756, "house": "1493", "name": "مجلس مجمع 756 بيت 1493", "image": "images/756_1493.png"}, {"block": 756, "house": "1500", "name": "مجلس مجمع 756 بيت 1500", "image": "images/756_1500.png"}, {"block": 756, "house": "1514", "name": "مجلس مجمع 756 بيت 1514", "image": "images/756_1514.png"}, {"block": 756, "house": "1522", "name": "مجلس مجمع 756 بيت 1522", "image": "images/756_1522.png"}, {"block": 756, "house": "1526", "name": "مجلس مجمع 756 بيت 1526", "image": "images/756_1526.png"}, {"block": 756, "house": "1605", "name": "مجلس مجمع 756 بيت 1605", "image": "images/756_1605.png"}, {"block": 756, "house": "1609", "name": "مجلس مجمع 756 بيت 1609", "image": "images/756_1609.png"}, {"block": 756, "house": "1617", "name": "مجلس مجمع 756 بيت 1617", "image": "images/756_1617.png"}, {"block": 756, "house": "1620", "name": "مجلس مجمع 756 بيت 1620", "image": "images/756_1620.png"}, {"block": 756, "house": "2724", "name": "مجلس مجمع 756 بيت 2724", "image": "images/756_2724.png"}, {"block": 758, "house": "13", "name": "مجلس مجمع 758 بيت 13", "image": "images/758_13.png"}, {"block": 758, "house": "694", "name": "مجلس مجمع 758 بيت 694", "image": "images/758_694.png"}, {"block": 758, "house": "1080", "name": "مجلس مجمع 758 بيت 1080", "image": "images/758_1080.png"}];
+    const MAJLES_BY_BLOCK = {
+      752: [
+        {"block": 752, "house": 96, "road": 58, "name": "الحاج حسن منصور حسن المرضي", "image": "images/752_96.png"},
+        {"block": 752, "house": 1010, "road": 5221, "name": "المرحوم الحاج ابراهيم علي آل عتيق", "image": "images/752_1010.png"},
+        {"block": 752, "house": 1068, "road": 5222, "name": "حبيب بن يوسف أحمد حجير", "image": "images/752_1068.png"},
+        {"block": 752, "house": 1076, "road": 5222, "name": "الحاج ابراهيم أحمد يوسف أبوهاني", "image": "images/752_1076.png"},
+        {"block": 752, "house": 1124, "road": 5223, "name": "كاظم جمعة حسن البيرمي", "image": "images/752_1124.png"},
+        {"block": 752, "house": 1171, "road": 5225, "name": "الحاج عبدالله أحمد يوسف أبوهاني (بوشريف)", "image": "images/752_1171.png"},
+        {"block": 752, "house": 1370, "road": 5227, "name": "المرحوم الحاج يوسف أحمد حسن آل ابراهيم", "image": "images/752_1370.png"},
+        {"block": 752, "house": 1449, "road": 5228, "name": "المرحوم الحاج حسن و أخيه الحاج هلال عبدالله محمد الدرازي", "image": "images/752_1449.png"},
+        {"block": 752, "house": 1511, "road": 5230, "name": "مجلس المرحوم عبدالله علي بن ابراهيم أبو تاكي (شيبوه)", "image": "images/752_1511.png"},
+        {"block": 752, "house": 1585, "road": 5231, "name": "المرحوم الحاج محمد علي الماحوزي", "image": "images/752_1585.png"},
+        {"block": 752, "house": 1692, "road": 5232, "name": "علي غلوم رحمة الله", "image": "images/752_1692.png"},
+        {"block": 752, "house": 1698, "road": 5235, "name": "المرحوم السيد جعفر السيد ناصرالسيد هاشم", "image": "images/752_1698.png"},
+        {"block": 752, "house": 1876, "road": 5235, "name": "علي حسن علي حسن السكران", "image": "images/752_1876.png"},
+        {"block": 752, "house": 1934, "road": 5323, "name": "المرحوم عباس يوسف حسن ناصر البيرمي", "image": "images/752_1934.png"},
+        {"block": 752, "house": 2204, "road": 5238, "name": "السيد علي السيد أحمد العلوي", "image": "images/752_2204.png"},
+        {"block": 752, "house": 2253, "road": 5238, "name": "رياض و محمد ابناء أحمد محسن  البيرمي", "image": "images/752_2253.png"}
+      ],
+      754: [
+        {"block": 754, "house": 170, "road": 5405, "name": "الحاج عبدالله بن حسن عبدالحسين العالي ( أبو عبدالرسول)", "image": "images/754_170.png"},
+        {"block": 754, "house": 175, "road": 5405, "name": "المرحوم الحاج أحمد بن حسن عبدالحسين العالي ( أبو يوسف )", "image": "images/754_175.png"},
+        {"block": 754, "house": 178, "road": 5405, "name": "المرحوم السيد علي السيد ناصر السيد هاشم", "image": "images/754_178.png"},
+        {"block": 754, "house": 221, "road": 5406, "name": "المرحوم الحاج سلمان محمد المسجن", "image": "images/754_221.png"},
+        {"block": 754, "house": 229, "road": 5406, "name": "مجلس الحاج عطية موسى كاظم", "image": "images/754_229.png"},
+        {"block": 754, "house": 250, "road": 5406, "name": "المرحوم الحاج أحمد عيسى احمد ناصرالبيرمي", "image": "images/754_250.png"},
+        {"block": 754, "house": 258, "road": 5406, "name": "الحاج حبيب كاظم جمعة البيرمي ( أبو عادل)", "image": "images/754_258.png"},
+        {"block": 754, "house": 260, "road": 5406, "name": "الحاج عبدالحسين محمد عبدالحسين آل ابراهيم ( الشيخ )", "image": "images/754_260.png"},
+        {"block": 754, "house": 261, "road": 5406, "name": "المرحوم الحاج علي بن ربيع علي الربيع", "image": "images/754_261.png"},
+        {"block": 754, "house": 267, "road": 5406, "name": "المرحوم الحاج عبدالله أحمد محمد آل إبراهيم", "image": "images/754_267.png"},
+        {"block": 754, "house": 271, "road": 5406, "name": "مجلس الحاج إبراهيم محمد سلمان الهيبة", "image": "images/754_271.png"},
+        {"block": 754, "house": 299, "road": 5408, "name": "المرحوم الحاج عبدالله حسن آل ابراهيم", "image": "images/754_299.png"},
+        {"block": 754, "house": 300, "road": 5408, "name": "المرحوم السيد ابراهيم السيد ناصر السيد هاشم", "image": "images/754_300.png"},
+        {"block": 754, "house": 301, "road": 5408, "name": "المرحوم الحاج حبيب بن حسين أحمد آل حجير", "image": "images/754_301.png"},
+        {"block": 754, "house": 376, "road": 5412, "name": "السيد حسين السيد مهدي علوي ( أبو موسى)", "image": "images/754_376.png"},
+        {"block": 754, "house": 382, "road": 5412, "name": "الحاج عباس سلمان آل ابراهيم", "image": "images/754_382.png"},
+        {"block": 754, "house": 448, "road": 5415, "name": "الحاج حسن علي محمد العريبي", "image": "images/754_448.png"},
+        {"block": 754, "house": 482, "road": 5415, "name": "المرحوم مكي منصور حسن المرضي", "image": "images/754_482.png"},
+        {"block": 754, "house": 488, "road": 5415, "name": "السيد عدنان السيد يوسف هاشم العلوي", "image": "images/754_488.png"},
+        {"block": 754, "house": 506, "road": 5415, "name": "الحاج عبدالنبي منصور حسن المرضي", "image": "images/754_506.png"},
+        {"block": 754, "house": 517, "road": 5415, "name": "المرحوم الحاج محمد محسن البزاز", "image": "images/754_517.png"},
+        {"block": 754, "house": 518, "road": 5415, "name": "الحاج إبراهيم محمد علي", "image": "images/754_518.png"},
+        {"block": 754, "house": 524, "road": 5415, "name": "الحاج محسن منصور حسن بن علي", "image": "images/754_524.png"},
+        {"block": 754, "house": 525, "road": 5415, "name": "المرحوم الحاج جمعة بن حسن محمد المرضي", "image": "images/754_525.png"},
+        {"block": 754, "house": 545, "road": 5416, "name": "المرحوم الحاج حسين علي العريبي", "image": "images/754_545.png"},
+        {"block": 754, "house": 546, "road": 5416, "name": "الحاج إبراهيم علي محمد العريبي", "image": "images/754_546.png"},
+        {"block": 754, "house": 554, "road": 5416, "name": "السيد مجيد السيد حسين العلوي", "image": "images/754_554.png"},
+        {"block": 754, "house": 585, "road": "", "name": "المرحوم الحاج علي بن حسين أحمد آل حجير", "image": "images/754_585.png"},
+        {"block": 754, "house": 589, "road": 5427, "name": "المرحوم الحاج ابراهيم بن حسين أحمد آل حجير", "image": "images/754_589.png"},
+        {"block": 754, "house": 596, "road": 5414, "name": "السيد حسن السيد مهدي علوي", "image": "images/754_596.png"},
+        {"block": 754, "house": 617, "road": 5421, "name": "المرحومين الحاج أحمد و الحاج حسن سلمان حجير", "image": "images/754_617.png"},
+        {"block": 754, "house": 627, "road": 5421, "name": "المرحوم السيد ماجد السيد احمد السيد إبراهيم", "image": "images/754_627.png"},
+        {"block": 754, "house": 651, "road": 5543, "name": "الحاج احمد بن حسين أحمد آل حجير", "image": "images/754_651.png"},
+        {"block": 754, "house": 653, "road": 5423, "name": "المرحوم محمد سلمان محمد المسجن", "image": "images/754_653.png"},
+        {"block": 754, "house": 663, "road": 5423, "name": "المرحوم الحاج مهدي جاسم حسن البقال", "image": "images/754_663.png"},
+        {"block": 754, "house": 691, "road": 5425, "name": "المرحوم الحاج أحمد حسن البوري", "image": "images/754_691.png"},
+        {"block": 754, "house": 728, "road": 5427, "name": "مجلس المرحوم  الحاج حسين بن حبيب", "image": "images/754_728.png"},
+        {"block": 754, "house": 802, "road": 5431, "name": "المرحوم الحاج عبدالله جمعة حسن ناصر البيرمي", "image": "images/754_802.png"},
+        {"block": 754, "house": 804, "road": 5431, "name": "المرحوم الحاج سلمان ابراهيم عبدالله البيرمي ( أبوأبراهيم)", "image": "images/754_804.png"},
+        {"block": 754, "house": 812, "road": 5431, "name": "مجلس  الحاج محمد إبراهيم محمد علي العالي\n ( بجانب ماتم الطويلة)", "image": "images/754_812.png"},
+        {"block": 754, "house": 885, "road": 5435, "name": "الحاج حسن علي بن كاظم المرضي.", "image": "images/754_885.png"},
+        {"block": 754, "house": 886, "road": 5435, "name": "المرحوم مشترك/مجلس الحاج سلمان إبراهيم محمد علي العالي/مجلس الحاج سلمانمحمد الشخالة", "image": "images/754_886.png"},
+        {"block": 754, "house": 889, "road": 5435, "name": "الحاج احمد محسن أحمد البيرمي", "image": "images/754_889.png"},
+        {"block": 754, "house": 891, "road": 5435, "name": "المرحوم الحاج محسن أحمد ناصر البيرمي", "image": "images/754_891.png"},
+        {"block": 754, "house": 898, "road": 5435, "name": "المرحوم الحاج محمد كاظم  أحمد", "image": "images/754_898.png"},
+        {"block": 754, "house": 934, "road": 5439, "name": "المرحوم الحاج احمد عبدالله احمد عبدالله الحجيري", "image": "images/754_934.png"},
+        {"block": 754, "house": 962, "road": 5439, "name": "مجلس المرحوم الحاج حسن بن ابراهيم سلمان شيبوه", "image": "images/754_962.png"},
+        {"block": 754, "house": 973, "road": 5439, "name": "المرحوم الحاج حبيب عبدالله المسجن", "image": "images/754_973.png"},
+        {"block": 754, "house": 994, "road": 5439, "name": "المرحوم الحاج شهاب علي بن يوسف أبوهاني", "image": "images/754_994.png"},
+        {"block": 754, "house": 999, "road": 5439, "name": "المرحوم الحاج  كاظم علي محمد الغيص", "image": "images/754_999.png"},
+        {"block": 754, "house": 1012, "road": 5439, "name": "الحاج حبيب سلمان آل ابراهيم", "image": "images/754_1012.png"},
+        {"block": 754, "house": 1018, "road": 5441, "name": "يوسف يعقوب مرضي (الشيخ)", "image": "images/754_1018.png"},
+        {"block": 754, "house": 1052, "road": 5441, "name": "الحاج عبدالله سلمان عبدالله الخير", "image": "images/754_1052.png"},
+        {"block": 754, "house": 1068, "road": 5441, "name": "المرحوم الحاج  محمد ربيع ناصر (زايد) ( آل إبراهيم )", "image": "images/754_1068.png"},
+        {"block": 754, "house": 1070, "road": 5441, "name": "المرحوم الحاج حسين حبيب المعلم", "image": "images/754_1070.png"},
+        {"block": 754, "house": 1071, "road": 5441, "name": "المرحوم السيد محفوظ السيد طاهر العلوي", "image": "images/754_1071.png"},
+        {"block": 754, "house": 1176, "road": 5443, "name": "الحاج عبدالله يعقوب يوسف آل يعقوب", "image": "images/754_1176.png"},
+        {"block": 754, "house": 1177, "road": 5443, "name": "السيد هادي السيد محسن العلوي", "image": "images/754_1177.png"},
+        {"block": 754, "house": 1184, "road": 5439, "name": "المرحوم الحاج محمد بن حسين عيسى الدرازي ( أبوحسين)", "image": "images/754_1184.png"},
+        {"block": 754, "house": 1193, "road": 5443, "name": "الحاج منصور يعقوب يوسف", "image": "images/754_1193.png"},
+        {"block": 754, "house": 1195, "road": 5443, "name": "السيد ياسين السيد جواد العلوي", "image": "images/754_1195.png"},
+        {"block": 754, "house": 1199, "road": 5443, "name": "المرحوم الحاج عبدالكريم كاظم حسن البقال", "image": "images/754_1199.png"},
+        {"block": 754, "house": 1207, "road": 5443, "name": "المرحوم الحاج هاني أحمد يوسف أبوهاني", "image": "images/754_1207.png"},
+        {"block": 754, "house": 1211, "road": 5443, "name": "مجلس المرحوم الحاج علي بن أحمد محمد أبو حمود", "image": "images/754_1211.png"},
+        {"block": 754, "house": 1213, "road": 5443, "name": "المرحوم الحاج علي بن حسن بن علي ( أبو حسن)", "image": "images/754_1213.png"},
+        {"block": 754, "house": 1219, "road": 5443, "name": "المرحوم الحاج عبدالله منصور بن محفوظ آل حجير", "image": "images/754_1219.png"},
+        {"block": 754, "house": 1221, "road": 5443, "name": "المرحوم الحاج خليل ابراهيم محفوظ", "image": "images/754_1221.png"},
+        {"block": 754, "house": 1223, "road": 5443, "name": "المرحوم الحاج أحمد بن يوسف احمد حجير", "image": "images/754_1223.png"},
+        {"block": 754, "house": 1743, "road": 5445, "name": "المرحوم الحاج حسين علي آل عتيق", "image": "images/754_1743.png"}
+      ],
+      756: [
+        {"block": 756, "house": 6, "road": 58, "name": "المرحوم السيد جواد السيد العلوي", "image": "images/756_6.png"},
+        {"block": 756, "house": 10, "road": 58, "name": "المرحوم الحاج حسن يعقوب يوسف آل يعقوب", "image": "images/756_10.png"},
+        {"block": 756, "house": 584, "road": 5641, "name": "سماحة الشيخ احمد خلف العصفور", "image": "images/756_584.png"},
+        {"block": 756, "house": 662, "road": 71, "name": "المرحوم السيد هاشم السيد أحمد العلوي", "image": "images/756_662.png"},
+        {"block": 756, "house": 1092, "road": 5636, "name": "الحاج احمد منصور حسن بن علي ( أبو أحمد)", "image": "images/756_1092.png"},
+        {"block": 756, "house": 1209, "road": 5640, "name": "المرحوم محمد يعقوب يوسف آل يعقوب", "image": "images/756_1209.png"},
+        {"block": 756, "house": 1298, "road": 5643, "name": "المرحوم الحاج محفوظ بن عبدالعزيز  آل حجير", "image": "images/756_1298.png"},
+        {"block": 756, "house": 1311, "road": 5647, "name": "المرحوم السيد عباس السيد شبر السيد ناصر", "image": "images/756_1311.png"},
+        {"block": 756, "house": 1339, "road": 5643, "name": "المرحوم الحاج  علي بن يوسف ابوهاني", "image": "images/756_1339.png"},
+        {"block": 756, "house": 1424, "road": 5647, "name": "المرحوم السيد هاشم السيد ناصر السيد هاشم", "image": "images/756_1424.png"},
+        {"block": 756, "house": 1430, "road": 5647, "name": "المرحوم السيد جواد السيد شبر السيد ناصر", "image": "images/756_1430.png"},
+        {"block": 756, "house": 1441, "road": 5647, "name": "المرحوم الحاج حسين بن يوسف حسين", "image": "images/756_1441.png"},
+        {"block": 756, "house": 1442, "road": 5647, "name": "المرحوم الحاج علي محمد عبدالله الحجيري ( المختار)", "image": "images/756_1442.png"},
+        {"block": 756, "house": 1443, "road": 5647, "name": "المرحوم الحاج منصور بن حسين آل حجير", "image": "images/756_1443.png"},
+        {"block": 756, "house": 1452, "road": 5647, "name": "المرحوم السيد مهدي السيد محمد السيد ناصر", "image": "images/756_1452.png"},
+        {"block": 756, "house": 1456, "road": 5647, "name": "السيد سلمان السيد ناصر السيد هاشم", "image": "images/756_1456.png"},
+        {"block": 756, "house": 1493, "road": 5649, "name": "المرحوم الحاج محسن عبداللطيف علي آل حجير", "image": "images/756_1493.png"},
+        {"block": 756, "house": 1500, "road": 5649, "name": "المرحوم الحاج علي بن ابراهيم سلمان أبوتاكي ( شيبوه )", "image": "images/756_1500.png"},
+        {"block": 756, "house": 1514, "road": 5649, "name": "المرحوم السيد عباس السيد طاهر العلوي", "image": "images/756_1514.png"},
+        {"block": 756, "house": 1522, "road": 5649, "name": "المرحوم الحاج احمد عبدالله العالي (اسكان بوري)", "image": "images/756_1522.png"},
+        {"block": 756, "house": 1526, "road": 5649, "name": "المرحوم الحاج محمد عبدالله العالي (اسكان بوري)", "image": "images/756_1526.png"},
+        {"block": 756, "house": 1605, "road": 5650, "name": "المرحوم الحاج عيسى بن علي عبدالله", "image": "images/756_1605.png"},
+        {"block": 756, "house": 1609, "road": 5650, "name": "المرحوم الحاج عبدالله سلمان إبراهيم  شيبوه", "image": "images/756_1609.png"},
+        {"block": 756, "house": 1617, "road": 5650, "name": "الحاج علي محمد محفوظ آل حجير", "image": "images/756_1617.png"},
+        {"block": 756, "house": 1620, "road": 5650, "name": "حسن محمد حسن البقال", "image": "images/756_1620.png"},
+        {"block": 756, "house": 2724, "road": 5673, "name": "المرحوم الحاج  محسن علي طاهر آل إبراهيم", "image": "images/756_2724.png"}
+      ],
+      758: [
+        {"block": 758, "house": 13, "road": 58, "name": "المرحوم الحاج عباس  واخيه الحاج عبدالعزيز علي حسين المري", "image": "images/758_13.png"},
+        {"block": 758, "house": 694, "road": 5824, "name": "المرحوم الحاج سلمان عبدالله المسجن (حجي هلال )", "image": "images/758_694.png"},
+        {"block": 758, "house": 1080, "road": 5835, "name": "المرحوم الحاج منصور حسن بن علي ( أبو أحمد)", "image": "images/758_1080.png"}
+      ]
+    };
 
-    const blocks = Array.from(new Set(MAJLES.map(x => x.block))).sort((a,b) => a-b);
+    const MAJLES = Object.values(MAJLES_BY_BLOCK).flat();
+    const blocks = Object.keys(MAJLES_BY_BLOCK).map(Number).sort((a,b) => a-b);
 
     const state = {
       block: "all",
@@ -318,18 +442,27 @@
       });
     }
 
+    function normalizeSearch(s) {
+      return String(s || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u064B-\u065F]/g, "") // remove Arabic diacritics
+        .replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)); // Arabic-Indic digits -> Latin
+    }
+
     function matches(item) {
       if (state.block !== "all" && String(item.block) !== String(state.block)) return false;
-      const q = state.q.trim().toLowerCase();
+      const q = normalizeSearch(state.q.trim());
       if (!q) return true;
 
       const hay = [
         item.name,
         String(item.block),
+        item.road ? String(item.road) : "",
         String(item.house)
-      ].join(" ").toLowerCase();
+      ].join(" ");
 
-      return hay.includes(q);
+      return normalizeSearch(hay).includes(q);
     }
 
     function render() {
@@ -344,6 +477,7 @@
 
       elGrid.innerHTML = filtered.map(item => {
         const name = escapeHtml(item.name);
+        const roadBadge = item.road ? `<span class="badge">الشارع: ${escapeHtml(item.road)}</span>` : "";
         return `
           <section class="card" aria-label="${name}">
             <div class="cardhead">
@@ -351,11 +485,11 @@
                 <p class="name">${name}</p>
                 <div class="sub">
                   <span class="badge">المجمع: ${item.block}</span>
+                  ${roadBadge}
                   <span class="badge">البيت: ${escapeHtml(item.house)}</span>
                 </div>
               </div>
               <div class="actions">
-                <a class="btn secondary" href="${item.image}" target="_blank" rel="noopener">فتح الصورة</a>
               </div>
             </div>
             <div class="imgwrap">
